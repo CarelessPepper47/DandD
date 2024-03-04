@@ -1,3 +1,5 @@
+import "./eq.js"
+
 let dice = Math.floor(Math.random() * 6) + 1;
 
 let dice20 = Math.floor(Math.random() * 20) + 1;
@@ -5,43 +7,43 @@ let dice20 = Math.floor(Math.random() * 20) + 1;
 let playerName = prompt("Podaj swoje imię", "Bubol")
 
 const eQItems = [ 
-{knife: 
-    {damage: 2,
-    times: 2,
-    cost: 1}
-}, 
-{sword: 
-    {damage: 4,
-    times: 1,
-    cost: 2}
-},
-{battleAxe: 
-    {damage: 5,
-    times: 2,
-    cost: 3}
-},
-{legendarySword: 
-    {damage: 6,
-    times: 1,
-    cost: 1,
-    healthOnUse: 2}
-},
-{shield: 
-    {damage: 0,
-    times: 1,
-    cost: 1}
-},
-{staff: 
-    {damage: 10,
-    times: 1,
-    cost: 3}
-}
-]
-
-
-const pickle = {
-    healthOnUse: 2
-}
+    {knife: 
+        {damage: 2,
+        times: 2,
+        cost: 1}
+    }, 
+    {sword: 
+        {damage: 4,
+        times: 1,
+        cost: 2}
+    },
+    {battleAxe: 
+        {damage: 5,
+        times: 2,
+        cost: 3}
+    },
+    {legendarySword: 
+        {damage: 6,
+        times: 1,
+        cost: 1,
+        healthOnUse: 2}
+    },
+    {shield: 
+        {damage: 0,
+        times: 1,
+        cost: 1}
+    },
+    {staff: 
+        {damage: 10,
+        times: 1,
+        cost: 3}
+    }
+    ]
+    
+    
+    const pickle = {
+        healthOnUse: 2
+    }
 
 let chest = [5, eQItems[3], "Rubbish", pickle, eQItems[2], 2, 7, 1, "Rubbish"];
 
@@ -194,15 +196,6 @@ function rollDice() {
     }
     return randomNumber = Math.floor(Math.random() * 6) + 1;
 }
-
-if (decision === "Yes") {
-    player.money = player.money + 5;
-    console.log("Hajs jest")
-} else {
-    player.luck = player.luck + 1;
-    console.log("Brak Hajsu")
-}
-
 
 function encounter() {
     if (rolls === 0) {

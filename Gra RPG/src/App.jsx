@@ -1,26 +1,32 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./index.css";
 import "./Giera.js";
-
-const dupa = ["mleko", 5, "rujec"];
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
-      <body>
-        <main>
-          <button class="" onclick="rollDice()">
+      <main>
+        <div className="flex flex-col">
+          <button
+            className="px-5 pt-2 bg-slate-500 align-middle"
+            onClick={() => {
+              rollDice();
+            }}
+          >
             Step
           </button>
-          <button class="" onclick="encounter()">
+          <button
+            className=""
+            onClick={() => {
+              encounter();
+            }}
+          >
             Encounter
           </button>
-        </main>
-      </body>
+        </div>
+      </main>
     </>
   );
 }
